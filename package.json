@@ -1,0 +1,25 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/lit": "^1.0.1",
+    "@fontsource/roboto": "^4.5.8",
+    "astro": "^1.1.5",
+    "daisyui": "^2.25.0",
+    "nanostores": "^0.7.0",
+    "sass": "^1.54.9"
+  },
+  "devDependencies": {
+    "@astrojs/preact": "^1.1.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "preact": "^10.10.6"
+  }
+}

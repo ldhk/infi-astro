@@ -1,0 +1,172 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import NavBar from "../components/NavBar";
+import { NAVBAR_CONFIG } from "../constants/base";
+import "../styles/style.scss";
+const title = "Hello 👋🏻";
+---
+
+<Layout title="Welcome to Astro.">
+	<NavBar
+			client:load
+			title={NAVBAR_CONFIG.title}
+			href={NAVBAR_CONFIG.href}
+			items={NAVBAR_CONFIG.items}
+
+		/>
+	<div class="container-linear min-h-screen">
+		<main class="mx-auto px-4 md:container xl:container">
+			<h1 class="text-transparent pt-40 leading-3 text-5xl md:text-8xl font-bold py-6 fade-in">{title}</h1>
+			<p class="pre-text text-2xl font-bold font-Neue md:py-4">Hôm nay có zì zui 👀 </p>
+			 <!-- <p class="instructions">
+				Check out the <code>src/pages</code> directory to get started.<br />
+				<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
+				above.
+			</p> -->
+			<!-- {<ul role="list" class="link-card-grid">
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Chat"
+					body="Come say hi to our amazing Discord community. ❤️"
+				/>
+			</ul>} -->
+		</main>
+	</div>
+	<div class="container-linear min-h-screen">
+		<main class="mx-auto px-4 md:container xl:container">
+			<h1 class="text-transparent text-6xl md:text-9xl font-bold py-12">Spring</h1>
+		</main>
+	</div>
+	<div class="container-linear min-h-screen">
+		<main class="mx-auto px-4 md:container xl:container">
+			<h1 class="text-transparent text-6xl md:text-9xl font-bold py-12">Summer</h1>
+		</main>
+	</div>
+	<div class="container-linear min-h-screen">
+		<main class="mx-auto px-4 md:container xl:container">
+			<h1 class="text-transparent text-6xl md:text-9xl font-bold py-12">Autumn</h1>
+		</main>
+	</div>
+	<div class="container-linear min-h-screen">
+		<main class="mx-auto px-4 md:container xl:container">
+			<h1 class="text-transparent text-6xl md:text-9xl font-bold py-12">Winter</h1>
+		</main>
+	</div>
+</Layout>
+
+<style lang="scss">
+	:root {
+		--astro-gradient: linear-gradient(0deg, #2980B9, #6DD5FA, #FFFFFF);
+	}
+
+	@keyframes fadeIn {
+	0% { 
+		opacity: 0; 
+		transform: translateY(-10px);
+	}
+	100% { 
+		opacity: 1; 
+		transform: translate(0);}
+	}
+
+	@keyframes fadetoTop {
+	0% { 
+		opacity: 0; 
+		transform: translateY(10px);
+	}
+	100% { 
+		opacity: 1; 
+		transform: translate(0);}
+	}
+
+	.fade-in {
+		animation: fadeIn linear 500ms;
+	}
+	.font-Neue {
+		font-family: "NeueHaasGroteskText Pro",Arial,Helvetica,sans-serif;
+	}
+
+	.pre-text {
+		animation: fadetoTop linear 500ms;
+	}
+	.text-transparent {
+		font-family: "NeueHaasGroteskText Pro",Arial,Helvetica,sans-serif;
+		-webkit-text-stroke-width: 1px;
+    	-webkit-text-stroke-color: black;
+		color: transparent;
+    	position: relative; 
+		
+		
+		// &:before {
+		// content: 'HELLO';
+		// color: #000!important;
+		// opacity: 1;
+		// position: absolute;
+		// top: 80px;
+		// bottom: 0;
+		// left: 0;
+		// right: 0;
+		// }
+		
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

@@ -1,0 +1,89 @@
+@keyframes fadeInNBright {
+	0% {
+		filter: brightness(80%);
+		background: {
+			image:
+			radial-gradient(rgba(rgba(255, 255, 0, 0), 0.3), rgba(rgba(255, 255, 0, 0), 0) 20vw),
+			radial-gradient(rgba(rgba(0, 0, 255, 0), 0.3), rgba(rgba(0, 0, 255, 0), 0) 32vw),
+			radial-gradient(rgba(red, 0.3), rgba(red, 0) 30vw),
+			radial-gradient(rgba(rgba(0, 128, 0, 0), 0.3), rgba(rgba(0, 128, 0, 0), 0) 30vw),
+			radial-gradient(rgba(rgba(255, 0, 0, 0), 0.3), rgba(rgba(255, 0, 0, 0), 0) 30vw);
+			position:
+				-40vw 14rem,
+				50% 10rem,
+				60vw 14rem,
+				-10vw calc(14rem + 20vw),
+				30vw calc(14rem + 20vw);
+			size: 80vw 80vw;
+			repeat: no-repeat;		
+		  }
+	}
+	50% { 
+		filter: brightness(90%);
+
+	}
+	100% {
+		filter: brightness(100%);
+
+	}
+	}
+
+.container-linear {
+	animation: fadeInNBright 10s cubic-bezier(0.25, 1, 0.5, 1);
+	overflow-y: scroll; 
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	// background: {
+	// 	image:
+	// 	  radial-gradient(rgba(red, 0.3), rgba(red, 0) 30vw),
+	// 	  radial-gradient(rgba(green, 0.3), rgba(green, 0) 30vw),
+	// 	  radial-gradient(rgba(blue, 0.3), rgba(blue, 0) 32vw),
+	// 	  radial-gradient(rgba(yellow, 0.3), rgba(yellow, 0) 20vw),
+	// 	  radial-gradient(rgba(red, 0.3), rgba(red, 0) 30vw);
+	// 	position:
+	// 	  -40vw 14rem,
+	// 	  50% 10rem,
+	// 	  60vw 14rem,
+	// 	  -10vw calc(14rem + 20vw),
+	// 	  30vw calc(14rem + 20vw);
+	// 	size: 80vw 80vw;
+	// 	repeat: no-repeat;
+	//   }
+	  background: {
+		image:
+		radial-gradient(rgba(rgba(255, 255, 0, 0), 0.3), rgba(rgba(255, 255, 0, 0), 0) 20vw),
+		radial-gradient(rgba(rgba(0, 0, 255, 0), 0.3), rgba(rgba(0, 0, 255, 0), 0) 32vw),
+		radial-gradient(rgba(red, 0.3), rgba(red, 0) 30vw),
+		radial-gradient(rgba(rgba(0, 128, 0, 0), 0.3), rgba(rgba(0, 128, 0, 0), 0) 30vw),
+		radial-gradient(rgba(rgba(255, 0, 0, 0), 0.3), rgba(rgba(255, 0, 0, 0), 0) 30vw);
+		position:
+			34vw -15rem, 
+			-119% -22rem, 
+			52vw 8rem, 
+			16vw calc(14rem + -12vw), 
+			30vw calc(14rem + 20vw);
+			// -40vw 14rem,
+			// 50% 10rem,
+			// 60vw 14rem,
+			// -10vw calc(14rem + 20vw),
+			// 30vw calc(14rem + 20vw);
+		size: 80vw 80vw;
+		repeat: no-repeat;		
+	  }
+	  position: relative;
+	  &:before {
+		content: '';
+		opacity: 0.6;
+		background-repeat: repeat;
+		background-size: 257px auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image:url("https://ven.com.au/wp-content/themes/ven/html/dist/images/pattern-noise.png");
+		z-index: 0;
+	}	
+	
+	
+}

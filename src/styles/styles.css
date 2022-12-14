@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: "Roboto", sans-serif; }
+/* 
+@font-face {
+    font-family: 'NeueHaasDisplayBlack';
+    src: url('/fonts/NeueHaasDisplayBlack.ttf') format('ttf');
+  }
+@font-face {
+font-family: 'NeueHaasDisplayBold';
+src: url('/fonts/NeueHaasDisplayBold.ttf') format('ttf');
+} */
